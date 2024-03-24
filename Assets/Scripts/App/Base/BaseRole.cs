@@ -1,17 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BaseRole : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Animator animator;
+    [HideInInspector] public Rigidbody2D roleRg;
+    [HideInInspector] public CapsuleCollider2D roleCollider;
+    
+    public virtual void Awake()
+    {
+        roleRg = GetComponent<Rigidbody2D>();
+        roleCollider = GetComponent<CapsuleCollider2D>();
+    }
+
+    public virtual void Start()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public virtual void Update()
     {
         
     }
