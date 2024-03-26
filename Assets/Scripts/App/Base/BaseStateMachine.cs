@@ -1,9 +1,19 @@
+using UnityEngine;
+
 namespace App.Base
 {
-    public class BaseStateMachine
+    public abstract class BaseStateMachine
     {
-        public BaseState CurrentState { get; protected set; }
-        
+        public BaseRole role;
+        public readonly Animator animator;
+        public BaseState CurrentState { get; private set; }
+
+        protected BaseStateMachine(BaseRole role, Animator animator)
+        {
+            this.role = role;
+            this.animator = animator;
+        }
+
         public virtual void Initialize(BaseState startingState)
         {
             CurrentState = startingState;

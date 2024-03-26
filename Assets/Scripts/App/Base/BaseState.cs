@@ -4,10 +4,11 @@ namespace App.Base
 {
     public abstract class BaseState
     {
-        protected string argsName;
+        private string argsName;
         
-        public BaseRole role;
-        public BaseStateMachine machine;
+        protected BaseRole role;
+        protected BaseStateMachine machine;
+        protected Rigidbody2D rg;
         
         
         public BaseState(BaseRole role, BaseStateMachine stateMachine, string argsName)
@@ -15,6 +16,7 @@ namespace App.Base
             this.role = role;
             this.machine = stateMachine;
             this.argsName = argsName;
+            rg = role.rg;
         }
 
         public virtual void Update()

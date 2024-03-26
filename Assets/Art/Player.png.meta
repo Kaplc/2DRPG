@@ -1716,9 +1716,9 @@ TextureImporter:
       name: Player_92
       rect:
         serializedVersion: 2
-        x: 289
+        x: 283
         y: 177
-        width: 23
+        width: 29
         height: 28
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -2191,27 +2191,6 @@ TextureImporter:
       bones: []
       spriteID: 9ecbfdcb9456985488f84268ca0f6609
       internalID: 1351497016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_91
-      rect:
-        serializedVersion: 2
-        x: 284
-        y: 177
-        width: 5
-        height: 5
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d1be58aad00d1344aefae785ada0959
-      internalID: 1702919148
       vertices: []
       indices: 
       edges: []

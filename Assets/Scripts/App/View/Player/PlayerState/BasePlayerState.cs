@@ -7,8 +7,9 @@ namespace App.View
     {
         protected float xAxis;
         protected float yAxis;
-        
-        public Player player => (Player) role;
+
+        protected Player player => (Player) role;
+        protected new PlayerStateMachine machine => base.machine as PlayerStateMachine;
 
         public BasePlayerState(BaseRole role, BaseStateMachine stateMachine, string argsName) : base(role, stateMachine, argsName)
         {
@@ -20,14 +21,23 @@ namespace App.View
             
             xAxis = Input.GetAxisRaw("Horizontal");
             yAxis = Input.GetAxisRaw("Vertical");
+            machine.animator.SetFloat("yVelocity", rg.velocity.y);
+            
+            
+            Flip();
+        }
 
+        private void Flip()
+        {
             if (xAxis > 0)
             {
-                player.transform.rotation = Quaternion.Euler(0,0,0);
+                player.transform.rotation = Quaternion.Euler(0, 0, 0);
+                player.dir = 1;
             }
             else if (xAxis < 0)
             {
-                player.transform.rotation = Quaternion.Euler(0,180,0);
+                player.transform.rotation = Quaternion.Euler(0, 180, 0);
+                player.dir = -1;
             }
         }
     }

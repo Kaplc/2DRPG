@@ -2,9 +2,9 @@ using App.Base;
 
 namespace App.View
 {
-    public class PlayerIdleState : BasePlayerState
+    public class PlayerIdleState : PlayerGroundState
     {
-        public PlayerIdleState(Player p, PlayerStateMachine m, string argsName) : base(p, m, argsName)
+        public PlayerIdleState(BaseRole p, PlayerStateMachine m, string argsName) : base(p, m, argsName)
         {
             
         }
@@ -14,6 +14,7 @@ namespace App.View
             base.Enter();
             
             player.SetVelocity(0,0);
+            machine.isRunning = false;
         }
 
         public override void Update()
@@ -23,7 +24,7 @@ namespace App.View
             // change run state
             if (xAxis != 0)
             {
-                machine.ChangeState(player.runState);
+                machine.ChangeState(machine.RunState);
             }
         }
     }
