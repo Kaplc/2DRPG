@@ -6,25 +6,33 @@ namespace App.View
     public class Player : BaseRole
     {
         [Header("Now State")] public int dir;
-        
+
         #region move info
 
         [Header("Move Args")] public float runSpeed;
         public float yVelocity;
         public float jumpForce;
 
-        [Header("Dash Args")]
-        public float dashCd;
-        public float dashCdTimer;
+        [Header("Dash Args")] public float dashCd;
+        [HideInInspector] public float dashCdTimer;
         public float dashDuration;
         public float dashSpeed;
         public float dashingFallingSpeed;
 
+        #region attack
+
+        [Header("Attack Args")] public float attackWindowTime;
+        [HideInInspector] public int attackCount;
+        [HideInInspector] public bool attacking;
+
         #endregion
 
-        #region state
+        #endregion
+
+        #region animation
 
         private PlayerStateMachine StateMachine { get; set; }
+        [HideInInspector] public bool animationFinish;
 
         #endregion
 
@@ -32,8 +40,7 @@ namespace App.View
         {
             base.Awake();
 
-            StateMachine = new PlayerStateMachine(this ,animator);
-
+            StateMachine = new PlayerStateMachine(this, animator);
         }
 
         public override void Start()
@@ -48,10 +55,18 @@ namespace App.View
             base.Update();
 
             StateMachine.CurrentState.Update();
-            
+
             InputDash();
+
+            // if (Input.GetMouseButtonDown(0))
+            // {
+            //     if (!attacking)
+            //     {
+            //         StateMachine.ChangeState(StateMachine.AttackState);
+            //     }
+            // }
         }
-        
+
         private void InputDash()
         {
             if (Input.GetKeyDown(KeyCode.LeftShift) && dashCdTimer < 0)
@@ -83,7 +98,18 @@ namespace App.View
             {
                 return true;
             }
+
             return false;
+        }
+
+        #endregion
+
+        #region Animation
+
+        public void AnimationFinishTrigger()
+        {
+            // playing animation finish
+            animationFinish = true;
         }
 
         #endregion

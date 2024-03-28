@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace App.View
 {
-    public class PlayerGroundState: BasePlayerState
+    public class PlayerGroundState : BasePlayerState
     {
         public PlayerGroundState(BaseRole role, BaseStateMachine stateMachine, string argsName) : base(role, stateMachine, argsName)
         {
@@ -22,12 +22,19 @@ namespace App.View
         public override void Update()
         {
             base.Update();
-            
+
             // jump
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 machine.ChangeState(machine.JumpingState);
             }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (machine.AttackState.attacking) return;
+                machine.ChangeState(machine.AttackState);
+            }
+
         }
     }
 }

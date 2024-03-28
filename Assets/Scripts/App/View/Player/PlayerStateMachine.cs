@@ -1,4 +1,5 @@
 using App.Base;
+using App.View.Ground.Attack;
 using UnityEngine;
 
 namespace App.View
@@ -11,7 +12,10 @@ namespace App.View
         public PlayerIdleState IdleState { get; private set; }
         public PlayerRunState RunState { get; private set; }
         public PlayerDashState DashState { get; private set; }
-
+        // attack state
+        public PlayerAttackState AttackState { get; private set; }
+        public PlayerAttack1State Attack1State { get; private set; }
+        public PlayerAttack2State Attack2State { get; private set; }
         // jump state
         public PlayerJumpingState JumpingState { get; private set; }
         public PlayerToppingState ToppingState { get; private set; }
@@ -24,6 +28,10 @@ namespace App.View
             IdleState = new PlayerIdleState(role, this, "Idle");
             RunState = new PlayerRunState(role, this, "Run");
             DashState = new PlayerDashState(role, this, "Dash");
+            // attack state
+            AttackState = new PlayerAttackState(role, this, "Attack");
+            Attack1State = new PlayerAttack1State(role, this, "Attack");
+            Attack2State = new PlayerAttack2State(role, this, "Attack");
             // jump state
             JumpingState = new PlayerJumpingState(role, this, "Jump");
             ToppingState = new PlayerToppingState(role, this, "Jump");

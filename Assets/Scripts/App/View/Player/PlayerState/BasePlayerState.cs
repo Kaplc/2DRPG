@@ -11,8 +11,18 @@ namespace App.View
         protected Player player => (Player) role;
         protected new PlayerStateMachine machine => base.machine as PlayerStateMachine;
 
+        protected float timer;
+
         public BasePlayerState(BaseRole role, BaseStateMachine stateMachine, string argsName) : base(role, stateMachine, argsName)
         {
+        }
+
+        public override void Enter()
+        {
+            base.Enter();
+            
+            // reset animation finish
+            player.animationFinish = false;
         }
 
         public override void Update()
@@ -23,11 +33,10 @@ namespace App.View
             yAxis = Input.GetAxisRaw("Vertical");
             machine.animator.SetFloat("yVelocity", rg.velocity.y);
             
-            
             Flip();
         }
 
-        private void Flip()
+        protected virtual void Flip()
         {
             if (xAxis > 0)
             {

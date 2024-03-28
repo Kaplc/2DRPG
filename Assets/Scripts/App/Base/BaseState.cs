@@ -2,7 +2,14 @@ using UnityEngine;
 
 namespace App.Base
 {
-    public abstract class BaseState
+    public interface IState
+    {
+        public void Enter();
+        public void Exit();
+        public void Update();
+    }
+    
+    public abstract class BaseState: IState
     {
         private string argsName;
         

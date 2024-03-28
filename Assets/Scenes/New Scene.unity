@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 1060788430}
   - component: {fileID: 1060788432}
   - component: {fileID: 1060788431}
+  - component: {fileID: 1060788433}
   m_Layer: 0
   m_Name: Animator
   m_TagString: Untagged
@@ -260,6 +261,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1060788433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060788429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83587cba279b8f84599c70dfd678a506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1644681756}
 --- !u!1 &1324405551
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,3 +568,7 @@ MonoBehaviour:
   dashDuration: 0.3
   dashSpeed: 2
   dashingFallingSpeed: 0.9
+  attackWindowTime: 0.25
+  attackCount: 0
+  attacking: 0
+  animationFinish: 0

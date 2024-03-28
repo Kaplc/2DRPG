@@ -42,18 +42,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Jump\PlayerJumpingState.cs" />
+    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Attack\PlayerAttack2State.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\BasePlayerState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\Player.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Move\PlayerRunState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Move\PlayerIdleState.cs" />
+    <Compile Include="Assets\Scripts\App\View\Generic\Animation\AnimationTriggers.cs" />
     <Compile Include="Assets\Scripts\App\Base\BaseRole.cs" />
     <Compile Include="Assets\Scripts\App\Base\BaseStateMachine.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Jump\PlayerFallingState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerStateMachine.cs" />
+    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Attack\PlayerAttack1State.cs" />
+    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Move\PlayerDashState.cs" />
+    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Attack\PlayerAttackState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\PlayerGroundState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Jump\PlayerToppingState.cs" />
     <Compile Include="Assets\Scripts\App\Base\BaseState.cs" />
-    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Move\PlayerDashState.cs" />
     <Reference Include="UnityEngine">
       <HintPath>E:\Develop\Unity\Unity 2021.3.35f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
