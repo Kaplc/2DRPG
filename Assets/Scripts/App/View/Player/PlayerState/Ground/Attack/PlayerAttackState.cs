@@ -7,7 +7,7 @@ namespace App.View.Ground.Attack
     {
 
         private int attackCount;
-        private float attackWindowTime => player.attackWindowTime;
+        private float AttackWindowTime => player.attackWindowTime;
         private float lastAttackTime;
 
         public bool attacking;
@@ -22,7 +22,7 @@ namespace App.View.Ground.Attack
             base.Enter();
 
             // reset attack count
-            if(attackCount > 1 || Time.time >= lastAttackTime + attackWindowTime){
+            if(attackCount > 1 || Time.time >= lastAttackTime + AttackWindowTime){
                 attackCount = 0;
             }
             
