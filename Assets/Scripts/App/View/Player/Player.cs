@@ -18,6 +18,7 @@ namespace App.View
         public float dashDuration;
         public float dashSpeed;
         public float dashingFallingSpeed;
+        public float downDashDuration;
         [HideInInspector] public bool isDashing;
 
         #region attack
@@ -34,6 +35,7 @@ namespace App.View
 
         private PlayerStateMachine StateMachine { get; set; }
         [HideInInspector] public bool animationFinish;
+        public bool animationStart;
 
         #endregion
 
@@ -65,7 +67,16 @@ namespace App.View
             if (Input.GetKeyDown(KeyCode.LeftShift) && dashCdTimer < 0)
             {
                 dashCdTimer = dashCd;
-                StateMachine.ChangeState(StateMachine.DashState);
+                // is running can down dash
+                if (Input.GetKey(KeyCode.S) && DetectGround() && StateMachine.CurrentState == StateMachine.RunState)
+                {
+                    
+                    StateMachine.ChangeState(StateMachine.PlayerDownDashState);
+                }
+                else
+                {
+                    StateMachine.ChangeState(StateMachine.DashState);
+                }
             }
             else
             {
@@ -103,6 +114,13 @@ namespace App.View
         {
             // playing animation finish
             animationFinish = true;
+            animationStart = false;
+        }
+        
+        public void AnimationStartTrigger()
+        {
+            // playing animation start
+            animationStart = true;
         }
 
         #endregion

@@ -35,15 +35,21 @@ namespace App.View
             
             Flip();
             
-            if (Input.GetMouseButtonDown(0)&& player.DetectGround())
+            InputAttack();
+        }
+
+        private void InputAttack()
+        {
+            if (Input.GetMouseButtonDown(0) && player.DetectGround())
             {
                 if (machine.AttackState.attacking) return;
-                
+
                 // dash attack
                 if (player.isDashing)
                 {
                     machine.AttackState.dashAttack = true;
                 }
+
                 machine.ChangeState(machine.AttackState);
             }
         }

@@ -12,6 +12,7 @@ namespace App.View
         public PlayerIdleState IdleState { get; private set; }
         public PlayerRunState RunState { get; private set; }
         public PlayerDashState DashState { get; private set; }
+        public PlayerDownDashState PlayerDownDashState { get; private set; }
         // attack state
         public PlayerAttackState AttackState { get; private set; }
         // jump state
@@ -26,6 +27,7 @@ namespace App.View
             IdleState = new PlayerIdleState(role, this, "Idle");
             RunState = new PlayerRunState(role, this, "Run");
             DashState = new PlayerDashState(role, this, "Dash");
+            PlayerDownDashState = new PlayerDownDashState(role, this, "DownDash");
             // attack state
             AttackState = new PlayerAttackState(role, this, "Attack");
             // jump state

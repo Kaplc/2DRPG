@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace App.View
 {
-    public class PlayerDashState : BasePlayerState
+    public class PlayerDownDashState : PlayerGroundState
     {
         private float durationTimer;
 
-        public PlayerDashState(BaseRole role, BaseStateMachine stateMachine, string argsName) : base(role, stateMachine, argsName)
+        public PlayerDownDashState(BaseRole role, BaseStateMachine stateMachine, string argsName) : base(role, stateMachine, argsName)
         {
         }
 
@@ -15,9 +15,9 @@ namespace App.View
         {
             base.Enter();
 
-            durationTimer = player.dashDuration;
-            
-            player.isDashing = true;
+            durationTimer = player.downDashDuration;
+            // slow
+            rg.velocity = new Vector2(0, rg.velocity.y);
         }
 
         public override void Update()
@@ -25,7 +25,7 @@ namespace App.View
             base.Update();
 
             durationTimer -= Time.deltaTime;
-            rg.velocity = new Vector2(player.dir * player.dashSpeed, rg.velocity.y * player.dashingFallingSpeed);
+            rg.velocity = new Vector2(player.dir * player.dashSpeed, rg.velocity.y);
             if (durationTimer < 0)
             {
                 if (machine.isRunning)
@@ -42,8 +42,8 @@ namespace App.View
         public override void Exit()
         {
             base.Exit();
-            
-            player.isDashing = false;
+
+            rg.velocity = Vector2.zero;
         }
 
         protected override void Flip()
