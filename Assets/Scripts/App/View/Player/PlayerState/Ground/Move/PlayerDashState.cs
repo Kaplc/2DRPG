@@ -16,6 +16,8 @@ namespace App.View
             base.Enter();
 
             durationTimer = player.dashDuration;
+            
+            player.isDashing = true;
         }
 
         public override void Update()
@@ -35,6 +37,13 @@ namespace App.View
                     machine.ChangeState(machine.IdleState);
                 }
             }
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            
+            player.isDashing = false;
         }
     }
 }

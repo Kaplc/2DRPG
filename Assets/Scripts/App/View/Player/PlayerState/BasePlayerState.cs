@@ -34,6 +34,18 @@ namespace App.View
             machine.animator.SetFloat("yVelocity", rg.velocity.y);
             
             Flip();
+            
+            if (Input.GetMouseButtonDown(0)&& player.DetectGround())
+            {
+                if (machine.AttackState.attacking) return;
+                
+                // dash attack
+                if (player.isDashing)
+                {
+                    machine.AttackState.dashAttack = true;
+                }
+                machine.ChangeState(machine.AttackState);
+            }
         }
 
         protected virtual void Flip()

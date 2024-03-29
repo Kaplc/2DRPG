@@ -42,7 +42,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Jump\PlayerJumpingState.cs" />
-    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Attack\PlayerAttack2State.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\BasePlayerState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\Player.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Move\PlayerRunState.cs" />
@@ -52,7 +51,6 @@
     <Compile Include="Assets\Scripts\App\Base\BaseStateMachine.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Jump\PlayerFallingState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerStateMachine.cs" />
-    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Attack\PlayerAttack1State.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Move\PlayerDashState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Attack\PlayerAttackState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\PlayerGroundState.cs" />

@@ -18,6 +18,7 @@ namespace App.View
         public float dashDuration;
         public float dashSpeed;
         public float dashingFallingSpeed;
+        [HideInInspector] public bool isDashing;
 
         #region attack
 
@@ -57,14 +58,6 @@ namespace App.View
             StateMachine.CurrentState.Update();
 
             InputDash();
-
-            // if (Input.GetMouseButtonDown(0))
-            // {
-            //     if (!attacking)
-            //     {
-            //         StateMachine.ChangeState(StateMachine.AttackState);
-            //     }
-            // }
         }
 
         private void InputDash()

@@ -28,13 +28,7 @@ namespace App.View
             {
                 machine.ChangeState(machine.JumpingState);
             }
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (machine.AttackState.attacking) return;
-                machine.ChangeState(machine.AttackState);
-            }
-
+            
         }
     }
 }
