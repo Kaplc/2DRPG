@@ -724,7 +724,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644681752}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.914, y: -0.348, z: -0.011826769}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -750,11 +750,11 @@ MonoBehaviour:
   animator: {fileID: 1060788431}
   rg: {fileID: 0}
   roleCollider: {fileID: 0}
+  dir: 1
   groundDetect: {fileID: 45492692}
   wallDetect: {fileID: 1120808710}
   groundDetectDistance: 0.025
   wallDetectDistance: 0.05
-  dir: 0
   runSpeed: 1
   yVelocity: 0
   jumpForce: 3.5

@@ -8,6 +8,8 @@ public class BaseRole : MonoBehaviour
     public Animator animator;
     [HideInInspector] public Rigidbody2D rg;
     [HideInInspector] public CapsuleCollider2D roleCollider;
+    
+    [Header("Now State")] public int dir;
 
     #region dectect
     [Header("Detect")]
@@ -39,11 +41,11 @@ public class BaseRole : MonoBehaviour
         // draw ground detect line
         Gizmos.color = Color.red;
         var groundDetectPosition = groundDetect.position;
-        Gizmos.DrawLine(groundDetectPosition, new Vector2(groundDetectPosition.x, groundDetectPosition.y - groundDetectDistance));
+        Gizmos.DrawLine(groundDetectPosition, groundDetectPosition + new Vector3(0, -groundDetectDistance, 0));
         
         // draw wall detect line
         Gizmos.color = Color.red;
         var wallDetectPosition = wallDetect.position;
-        Gizmos.DrawLine(wallDetectPosition, new Vector2(wallDetectPosition.x + wallDetectDistance, wallDetectPosition.y));
+        Gizmos.DrawLine(wallDetectPosition, wallDetectPosition + new Vector3(wallDetectDistance * dir, 0, 0));
     }
 }

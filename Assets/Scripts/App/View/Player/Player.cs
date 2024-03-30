@@ -5,8 +5,6 @@ namespace App.View
 {
     public class Player : BaseRole
     {
-        [Header("Now State")] public int dir;
-
         #region move info
 
         [Header("Move Args")] public float runSpeed;
