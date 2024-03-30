@@ -58,32 +58,8 @@ namespace App.View
             base.Update();
 
             StateMachine.CurrentState.Update();
-
-            InputDash();
         }
-
-        private void InputDash()
-        {
-            if (Input.GetKeyDown(KeyCode.LeftShift) && dashCdTimer < 0)
-            {
-                dashCdTimer = dashCd;
-                // is running can down dash
-                if (Input.GetKey(KeyCode.S) && DetectGround() && StateMachine.CurrentState == StateMachine.RunState)
-                {
-                    
-                    StateMachine.ChangeState(StateMachine.PlayerDownDashState);
-                }
-                else
-                {
-                    StateMachine.ChangeState(StateMachine.DashState);
-                }
-            }
-            else
-            {
-                dashCdTimer -= Time.deltaTime;
-            }
-        }
-
+        
         #region velocity
 
         public void SetVelocity(float x, float y)
@@ -98,6 +74,17 @@ namespace App.View
         public bool DetectGround()
         {
             RaycastHit2D hit = Physics2D.Raycast(groundDetect.position, Vector2.down, groundDetectDistance, 1 << LayerMask.NameToLayer("Ground"));
+            if (hit.collider != null)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        
+        public bool DetectWall()
+        {
+            RaycastHit2D hit = Physics2D.Raycast(wallDetect.position, Vector2.right * dir, groundDetectDistance, 1 << LayerMask.NameToLayer("Ground"));
             if (hit.collider != null)
             {
                 return true;

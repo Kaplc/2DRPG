@@ -17,7 +17,7 @@ namespace App.View
 
             durationTimer = player.downDashDuration;
             // slow
-            rg.velocity = new Vector2(0, rg.velocity.y);
+            player.SetVelocity(0, rg.velocity.y);
         }
 
         public override void Update()
@@ -25,7 +25,7 @@ namespace App.View
             base.Update();
 
             durationTimer -= Time.deltaTime;
-            rg.velocity = new Vector2(player.dir * player.dashSpeed, rg.velocity.y);
+            player.SetVelocity(player.dir * player.dashSpeed, rg.velocity.y);
             if (durationTimer < 0)
             {
                 if (machine.isRunning)
@@ -42,8 +42,8 @@ namespace App.View
         public override void Exit()
         {
             base.Exit();
-
-            rg.velocity = Vector2.zero;
+            
+            player.SetVelocity(0,0);
         }
 
         protected override void Flip()

@@ -34,8 +34,8 @@ namespace App.View
             machine.animator.SetFloat("yVelocity", rg.velocity.y);
             
             Flip();
-            
             InputAttack();
+            InputDash();
         }
 
         private void InputAttack()
@@ -51,6 +51,31 @@ namespace App.View
                 }
 
                 machine.ChangeState(machine.AttackState);
+            }
+        }
+        
+        private void InputDash()
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift) && player.dashCdTimer < 0)
+            {
+                if (player.DetectWall())
+                {
+                    return;
+                }
+                // is running can down dash
+                if (Input.GetKey(KeyCode.S) && player.DetectGround() && machine.CurrentState == machine.RunState)
+                {
+                    machine.ChangeState(machine.PlayerDownDashState);
+                }
+                else
+                {
+                    machine.ChangeState(machine.DashState);
+                }
+                player.dashCdTimer = player.dashCd;
+            }
+            else
+            {
+                player.dashCdTimer -= Time.deltaTime;
             }
         }
 

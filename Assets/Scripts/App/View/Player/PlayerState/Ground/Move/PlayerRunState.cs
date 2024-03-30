@@ -1,4 +1,5 @@
 using App.Base;
+using UnityEngine;
 
 namespace App.View
 {
@@ -23,8 +24,17 @@ namespace App.View
             {
                 machine.ChangeState(machine.IdleState);
             }
+
+            if (player.DetectWall())
+            {
+                // collide with wall and stop
+                player.SetVelocity(0 , player.rg.velocity.y);
+            }
+            else
+            {
+                player.SetVelocity(xAxis * player.runSpeed , player.rg.velocity.y);
+            }
             
-            player.SetVelocity(xAxis * player.runSpeed , player.rg.velocity.y);
         }
     }
 }

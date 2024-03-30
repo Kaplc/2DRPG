@@ -12,7 +12,9 @@ public class BaseRole : MonoBehaviour
     #region dectect
     [Header("Detect")]
     public Transform groundDetect;
+    public Transform wallDetect;
     public float groundDetectDistance = 0.1f;
+    public float wallDetectDistance = 0.1f;
 
     #endregion
     
@@ -36,6 +38,12 @@ public class BaseRole : MonoBehaviour
     {
         // draw ground detect line
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(groundDetect.position, new Vector2(groundDetect.position.x, groundDetect.position.y - groundDetectDistance));
+        var groundDetectPosition = groundDetect.position;
+        Gizmos.DrawLine(groundDetectPosition, new Vector2(groundDetectPosition.x, groundDetectPosition.y - groundDetectDistance));
+        
+        // draw wall detect line
+        Gizmos.color = Color.red;
+        var wallDetectPosition = wallDetect.position;
+        Gizmos.DrawLine(wallDetectPosition, new Vector2(wallDetectPosition.x + wallDetectDistance, wallDetectPosition.y));
     }
 }

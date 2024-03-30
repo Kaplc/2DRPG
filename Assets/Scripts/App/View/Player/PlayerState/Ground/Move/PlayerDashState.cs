@@ -25,8 +25,10 @@ namespace App.View
             base.Update();
 
             durationTimer -= Time.deltaTime;
-            rg.velocity = new Vector2(player.dir * player.dashSpeed, rg.velocity.y * player.dashingFallingSpeed);
-            if (durationTimer < 0)
+            player.SetVelocity(player.dir * player.dashSpeed, rg.velocity.y * player.dashingFallingSpeed);
+            
+            // detect wall or time out to stop dashing
+            if (durationTimer < 0 || player.DetectWall())
             {
                 if (machine.isRunning)
                 {
