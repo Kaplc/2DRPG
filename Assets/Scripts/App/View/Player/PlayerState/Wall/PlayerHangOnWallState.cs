@@ -1,4 +1,5 @@
 using App.Base;
+using UnityEngine;
 
 namespace App.View.Wall
 {
@@ -11,15 +12,16 @@ namespace App.View.Wall
         public override void Enter()
         {
             base.Enter();
-
+            
             rg.gravityScale = 0;
+            rg.AddForce(Vector2.right * (player.dir * 10f));
         }
 
         public override void Update()
         {
             base.Update();
             
-            player.SetVelocity(0,0);
+            player.SetVelocity(rg.velocity.x,0);
         }
 
         public override void Exit()

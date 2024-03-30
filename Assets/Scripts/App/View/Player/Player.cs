@@ -31,7 +31,7 @@ namespace App.View
 
         #region animation
 
-        public PlayerStateMachine StateMachine { get; set; }
+        private PlayerStateMachine StateMachine { get; set; }
         [HideInInspector] public bool animationFinish;
 
         #endregion
@@ -40,7 +40,7 @@ namespace App.View
 
         public Transform hangOnWallDetect;
         public float hangOnWallDetectDistance;
-        private RaycastHit2D hangOnWallHit;
+        private RaycastHit2D hangOnWallHit; 
 
         #endregion
 
@@ -93,7 +93,7 @@ namespace App.View
         #region detect
 
 
-        public void DetectHangOnWall()
+        private void DetectHangOnWall()
         {
             if (StateMachine.CurrentState == StateMachine.HangOnWallState)
             {
@@ -107,6 +107,7 @@ namespace App.View
             {
                 // 
                 StateMachine.ChangeState(StateMachine.HangOnWallState);
+               
             }
         }
         
