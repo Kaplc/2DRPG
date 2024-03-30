@@ -31,9 +31,16 @@ namespace App.View
 
         #region animation
 
-        private PlayerStateMachine StateMachine { get; set; }
+        public PlayerStateMachine StateMachine { get; set; }
         [HideInInspector] public bool animationFinish;
-        public bool animationStart;
+
+        #endregion
+
+        #region detect
+
+        public Transform hangOnWallDetect;
+        public float hangOnWallDetectDistance;
+        private RaycastHit2D hangOnWallHit;
 
         #endregion
 
@@ -56,7 +63,23 @@ namespace App.View
             base.Update();
 
             StateMachine.CurrentState.Update();
+            
+            DetectHangOnWall();
         }
+
+        #region gizmos
+
+        protected override void OnDrawGizmos()
+        {
+            base.OnDrawGizmos();
+            
+            // hang on wall gizmos
+            Gizmos.color = Color.red;
+            var hangOnWallPos = hangOnWallDetect.position;
+            Gizmos.DrawLine(hangOnWallPos, hangOnWallPos + new Vector3(hangOnWallDetectDistance * dir, 0, 0));
+        }
+
+        #endregion
         
         #region velocity
 
@@ -69,27 +92,24 @@ namespace App.View
 
         #region detect
 
-        public bool DetectGround()
-        {
-            RaycastHit2D hit = Physics2D.Raycast(groundDetect.position, Vector2.down, groundDetectDistance, 1 << LayerMask.NameToLayer("Ground"));
-            if (hit.collider != null)
-            {
-                return true;
-            }
 
-            return false;
+        public void DetectHangOnWall()
+        {
+            if (StateMachine.CurrentState == StateMachine.HangOnWallState)
+            {
+                // set player y equal to hit point y
+                transform.position = new Vector3(transform.position.x, hangOnWallHit.transform.position.y - 0.203f, transform.position.z);
+                return;
+            }
+            
+            hangOnWallHit = Physics2D.Raycast(hangOnWallDetect.position, new Vector3(hangOnWallDetectDistance * dir, 0, 0), hangOnWallDetectDistance, 1 << LayerMask.NameToLayer("Ground"));
+            if (hangOnWallHit.collider is not null && hangOnWallHit.collider.gameObject.CompareTag("HangOnWallPos"))
+            {
+                // 
+                StateMachine.ChangeState(StateMachine.HangOnWallState);
+            }
         }
         
-        public bool DetectWall()
-        {
-            RaycastHit2D hit = Physics2D.Raycast(wallDetect.position, Vector2.right * dir, groundDetectDistance, 1 << LayerMask.NameToLayer("Ground"));
-            if (hit.collider != null)
-            {
-                return true;
-            }
-
-            return false;
-        }
 
         #endregion
 
@@ -99,13 +119,6 @@ namespace App.View
         {
             // playing animation finish
             animationFinish = true;
-            animationStart = false;
-        }
-        
-        public void AnimationStartTrigger()
-        {
-            // playing animation start
-            animationStart = true;
         }
 
         #endregion

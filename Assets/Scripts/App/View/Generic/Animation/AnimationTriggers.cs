@@ -10,11 +10,6 @@ namespace App.View.Generic.Animation
         {
             player.AnimationFinishTrigger();
         }
-        
-        public void AnimationStartTrigger()
-        {
-            player.AnimationStartTrigger();
-        }
     }
 }
 

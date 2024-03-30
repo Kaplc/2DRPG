@@ -1,5 +1,6 @@
 using App.Base;
 using App.View.Ground.Attack;
+using App.View.Wall;
 using UnityEngine;
 
 namespace App.View
@@ -19,6 +20,8 @@ namespace App.View
         public PlayerJumpingState JumpingState { get; private set; }
         public PlayerToppingState ToppingState { get; private set; }
         public PlayerFallingState FallingState { get; private set; }
+        // wall
+        public PlayerHangOnWallState HangOnWallState { get; private set; }
         
         public PlayerStateMachine(BaseRole role ,Animator animator) : base(role ,animator)
         {
@@ -34,6 +37,8 @@ namespace App.View
             JumpingState = new PlayerJumpingState(role, this, "Jump");
             ToppingState = new PlayerToppingState(role, this, "Jump");
             FallingState = new PlayerFallingState(role, this, "Jump");
+            // wall state
+            HangOnWallState = new PlayerHangOnWallState(role, this, "HangOnWall");
         }
     }
 }

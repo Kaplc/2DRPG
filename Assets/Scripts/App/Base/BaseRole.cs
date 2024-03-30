@@ -36,7 +36,7 @@ public class BaseRole : MonoBehaviour
         
     }
 
-    private void OnDrawGizmos()
+    protected virtual void OnDrawGizmos()
     {
         // draw ground detect line
         Gizmos.color = Color.red;
@@ -47,5 +47,27 @@ public class BaseRole : MonoBehaviour
         Gizmos.color = Color.red;
         var wallDetectPosition = wallDetect.position;
         Gizmos.DrawLine(wallDetectPosition, wallDetectPosition + new Vector3(wallDetectDistance * dir, 0, 0));
+    }
+    
+    public bool DetectGround()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(groundDetect.position, Vector2.down, groundDetectDistance, 1 << LayerMask.NameToLayer("Ground"));
+        if (hit.collider != null)
+        {
+            return true;
+        }
+
+        return false;
+    }
+        
+    public bool DetectWall()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(wallDetect.position, Vector2.right * dir, groundDetectDistance, 1 << LayerMask.NameToLayer("Ground"));
+        if (hit.collider != null)
+        {
+            return true;
+        }
+
+        return false;
     }
 }

@@ -57,6 +57,8 @@
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\PlayerGroundState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Jump\PlayerToppingState.cs" />
     <Compile Include="Assets\Scripts\App\Base\BaseState.cs" />
+    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Wall\PlayerHangOnWallState.cs" />
+    <Compile Include="Assets\Scripts\App\View\Wall\HangOnWallPos.cs" />
     <Reference Include="UnityEngine">
       <HintPath>E:\Develop\Unity\2021.3.36f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
