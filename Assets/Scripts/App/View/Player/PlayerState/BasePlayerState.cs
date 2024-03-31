@@ -34,11 +34,11 @@ namespace App.View
             machine.animator.SetFloat("yVelocity", rg.velocity.y);
             
             Flip();
-            InputAttack();
             InputDash();
+            InputAttack();
         }
 
-        private void InputAttack()
+        protected virtual void InputAttack()
         {
             if (Input.GetMouseButtonDown(0) && player.DetectGround())
             {
@@ -54,7 +54,7 @@ namespace App.View
             }
         }
         
-        private void InputDash()
+        protected virtual void InputDash()
         {
             if (Input.GetKeyDown(KeyCode.LeftShift) && player.dashCdTimer < 0)
             {

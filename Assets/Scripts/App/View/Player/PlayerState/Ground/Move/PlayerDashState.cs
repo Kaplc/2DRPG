@@ -25,7 +25,7 @@ namespace App.View
             base.Update();
 
             durationTimer -= Time.deltaTime;
-            player.SetVelocity(player.dir * player.dashSpeed, rg.velocity.y * player.dashingFallingSpeed);
+            player.SetVelocity(player.dir * player.dashSpeed, rg.velocity.y);
             
             // detect wall or time out to stop dashing
             if (durationTimer < 0 || player.DetectWall())

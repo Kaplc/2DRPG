@@ -50,5 +50,16 @@ namespace App.View
         {
             // do not flip when dashing
         }
+
+        protected override void InputAttack()
+        {
+            // do not attack when player is down dash
+            if (machine.CurrentState == machine.PlayerDownDashState)
+            {
+                return;
+            }
+            
+            base.InputAttack();
+        }
     }
 }

@@ -12,6 +12,8 @@ namespace App.View
         public override void Enter()
         {
             base.Enter();
+            // reset jump from wall
+            player.isJumpFromWall = false;
         }
 
         public override void Exit()
@@ -28,7 +30,6 @@ namespace App.View
             {
                 machine.ChangeState(machine.JumpingState);
             }
-            
         }
     }
 }

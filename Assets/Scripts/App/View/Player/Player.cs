@@ -9,21 +9,20 @@ namespace App.View
 
         [Header("Move Args")] public float runSpeed;
         public float yVelocity;
+        [Header("Jump Args")]
         public float jumpForce;
+        [HideInInspector]public bool isJumpFromWall;
 
         [Header("Dash Args")] public float dashCd;
         [HideInInspector] public float dashCdTimer;
         public float dashDuration;
         public float dashSpeed;
-        public float dashingFallingSpeed;
         public float downDashDuration;
         [HideInInspector] public bool isDashing;
 
         #region attack
 
         [Header("Attack Args")] public float attackWindowTime;
-        [HideInInspector] public int attackCount;
-        [HideInInspector] public bool attacking;
 
         #endregion
 
@@ -37,10 +36,12 @@ namespace App.View
         #endregion
 
         #region detect
-
+        
+        [Header("detect hang on wall Args")]
         public Transform hangOnWallDetect;
         public float hangOnWallDetectDistance;
-        private RaycastHit2D hangOnWallHit; 
+        private RaycastHit2D hangOnWallHit;
+        [HideInInspector]public int wallDir;
 
         #endregion
 
@@ -101,13 +102,19 @@ namespace App.View
                 transform.position = new Vector3(transform.position.x, hangOnWallHit.transform.position.y - 0.203f, transform.position.z);
                 return;
             }
+
+            if (isJumpFromWall)
+            {
+                return;
+            }
             
             hangOnWallHit = Physics2D.Raycast(hangOnWallDetect.position, new Vector3(hangOnWallDetectDistance * dir, 0, 0), hangOnWallDetectDistance, 1 << LayerMask.NameToLayer("Ground"));
             if (hangOnWallHit.collider is not null && hangOnWallHit.collider.gameObject.CompareTag("HangOnWallPos"))
             {
                 // 
                 StateMachine.ChangeState(StateMachine.HangOnWallState);
-               
+                // set wall dir
+                wallDir = dir;
             }
         }
         

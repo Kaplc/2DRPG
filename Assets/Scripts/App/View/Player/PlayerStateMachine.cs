@@ -22,6 +22,7 @@ namespace App.View
         public PlayerFallingState FallingState { get; private set; }
         // wall
         public PlayerHangOnWallState HangOnWallState { get; private set; }
+        public PlayerClimbState ClimbState { get; private set; }
         
         public PlayerStateMachine(BaseRole role ,Animator animator) : base(role ,animator)
         {
@@ -39,6 +40,7 @@ namespace App.View
             FallingState = new PlayerFallingState(role, this, "Jump");
             // wall state
             HangOnWallState = new PlayerHangOnWallState(role, this, "HangOnWall");
+            ClimbState = new PlayerClimbState(role, this, "Jump");
         }
     }
 }

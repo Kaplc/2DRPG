@@ -14,9 +14,18 @@ public class PlayerJumpingState : BasePlayerState
     public override void Enter()
     {
         base.Enter();
-        
-        // up force to jump
-        player.SetVelocity(rg.velocity.x, player.jumpForce);
+
+        if (player.isJumpFromWall)
+        {
+            // jump from wall
+            player.SetVelocity(player.dir * player.jumpForce, player.jumpForce * 0.5f);
+        }
+        else
+        {
+            // up force to jump
+            player.SetVelocity(rg.velocity.x, player.jumpForce);
+        }
+
     }
     
     public override void Exit()

@@ -561,7 +561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120808709}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0555, y: 0.097, z: 0}
+  m_LocalPosition: {x: 0.0555, y: -0.1589, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -862,16 +862,15 @@ MonoBehaviour:
   runSpeed: 1
   yVelocity: 0
   jumpForce: 3.5
+  isJumpFromWall: 0
   dashCd: 1
   dashCdTimer: 0
   dashDuration: 0.3
   dashSpeed: 2
-  dashingFallingSpeed: 0.9
   downDashDuration: 0.5
   isDashing: 0
   attackWindowTime: 0.25
-  attackCount: 0
-  attacking: 0
   animationFinish: 0
   hangOnWallDetect: {fileID: 105748694}
   hangOnWallDetectDistance: 0.05
+  wallDir: 0
