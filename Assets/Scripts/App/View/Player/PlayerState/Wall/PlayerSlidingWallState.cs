@@ -37,7 +37,7 @@ namespace App.View
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                player.isJumpFromWall = true;
+                machine.isJumpFromWall = true;
                 machine.ChangeState(machine.JumpingState);
             }
         }

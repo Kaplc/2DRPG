@@ -45,7 +45,7 @@ namespace App.View
                 if (machine.AttackState.attacking) return;
 
                 // dash attack
-                if (player.isDashing)
+                if (machine.isDashing)
                 {
                     machine.AttackState.dashAttack = true;
                 }

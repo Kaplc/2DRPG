@@ -7,7 +7,14 @@ namespace App.View
 {
     public class PlayerStateMachine: BaseStateMachine
     {
+        #region state info
         public bool isRunning;
+        public bool isJumpFromWall;
+        public bool isDashing;
+
+        #endregion
+
+
         // ground state
         public PlayerGroundState GroundState { get; private set; }
         public PlayerIdleState IdleState { get; private set; }

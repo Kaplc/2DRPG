@@ -15,7 +15,7 @@ public class PlayerJumpingState : BasePlayerState
     {
         base.Enter();
 
-        if (player.isJumpFromWall)
+        if (machine.isJumpFromWall)
         {
             // jump from wall
             player.SetVelocity(player.dir * player.jumpForce, player.jumpForce * 0.5f);

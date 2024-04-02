@@ -13,7 +13,7 @@ namespace App.View
         {
             base.Enter();
             // reset jump from wall
-            player.isJumpFromWall = false;
+            machine.isJumpFromWall = false;
         }
 
         public override void Exit()

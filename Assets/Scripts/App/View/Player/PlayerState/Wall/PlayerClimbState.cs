@@ -12,7 +12,7 @@ namespace App.View.Wall
         {
             base.Enter();
 
-            player.isJumpFromWall = true;
+            machine.isJumpFromWall = true;
             player.SetVelocity(rg.velocity.x, player.jumpForce);
         }
 

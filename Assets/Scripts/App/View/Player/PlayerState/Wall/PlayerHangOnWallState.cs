@@ -29,7 +29,7 @@ namespace App.View.Wall
                 if (player.wallDir != player.dir)
                 {
                     // wall dir is opposite to player dir then jump from wall
-                    player.isJumpFromWall = true;
+                    machine.isJumpFromWall = true;
                     machine.ChangeState(machine.JumpingState);
                 }
                 else

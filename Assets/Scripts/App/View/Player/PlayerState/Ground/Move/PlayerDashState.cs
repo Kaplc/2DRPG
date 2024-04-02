@@ -17,7 +17,7 @@ namespace App.View
 
             durationTimer = player.dashDuration;
             
-            player.isDashing = true;
+            machine.isDashing = true;
         }
 
         public override void Update()
@@ -45,7 +45,7 @@ namespace App.View
         {
             base.Exit();
             
-            player.isDashing = false;
+            machine.isDashing = false;
         }
 
         protected override void Flip()

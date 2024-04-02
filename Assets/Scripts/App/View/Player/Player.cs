@@ -11,14 +11,14 @@ namespace App.View
         public float yVelocity;
         [Header("Jump Args")]
         public float jumpForce;
-        [HideInInspector]public bool isJumpFromWall;
+        
 
         [Header("Dash Args")] public float dashCd;
         [HideInInspector] public float dashCdTimer;
         public float dashDuration; 
         public float dashSpeed; 
         public float downDashDuration;
-        [HideInInspector] public bool isDashing;
+   
 
         #region attack
 
@@ -132,7 +132,7 @@ namespace App.View
                 return;
             }
 
-            if (isJumpFromWall)
+            if (StateMachine.isJumpFromWall)
             {
                 return;
             }
