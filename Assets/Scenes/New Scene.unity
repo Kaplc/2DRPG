@@ -857,7 +857,7 @@ MonoBehaviour:
   dir: 1
   groundDetect: {fileID: 45492692}
   wallDetect: {fileID: 1120808710}
-  groundDetectDistance: 0.025
+  groundDetectDistance: 0.03
   wallDetectDistance: 0.05
   runSpeed: 1
   yVelocity: 0
@@ -870,7 +870,8 @@ MonoBehaviour:
   downDashDuration: 0.5
   isDashing: 0
   attackWindowTime: 0.25
+  slidingWallSpeed: 0.5
+  wallDir: 0
   animationFinish: 0
   hangOnWallDetect: {fileID: 105748694}
   hangOnWallDetectDistance: 0.05
-  wallDir: 0

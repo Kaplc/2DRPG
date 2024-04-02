@@ -38,6 +38,11 @@ namespace App.View.Wall
                     machine.ChangeState(machine.ClimbState);
                 }
             }
+
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                machine.ChangeState(machine.SlidingWallState);
+            }
         }
 
         public override void Exit()

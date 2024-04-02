@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Project\\Unity\\2DRPG\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|E:\\Project\\Unity\\2DRPG\\assets\\scripts\\app\\view\\player\\playerstate\\wall\\playerslidingwallstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\app\\view\\player\\playerstate\\wall\\playerslidingwallstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|e:\\project\\unity\\2drpg\\assets\\scripts\\app\\view\\player\\playerstate\\wall\\playerhangonwallstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\app\\view\\player\\playerstate\\wall\\playerhangonwallstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|E:\\Project\\Unity\\2DRPG\\assets\\scripts\\app\\view\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\app\\view\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerHangOnWallState.cs",
+              "DocumentMoniker": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerHangOnWallState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerHangOnWallState.cs",
+              "ToolTip": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerHangOnWallState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerHangOnWallState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T19:38:18.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerSlidingWallState.cs",
+              "DocumentMoniker": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerSlidingWallState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerSlidingWallState.cs",
+              "ToolTip": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerSlidingWallState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerSlidingWallState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T19:38:17.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Player.cs",
+              "DocumentMoniker": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\App\\View\\Player\\Player.cs",
+              "ToolTip": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\Player.cs",
+              "RelativeToolTip": "Assets\\Scripts\\App\\View\\Player\\Player.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAgwDIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T18:47:10.777Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -15,14 +15,21 @@ namespace App.View
 
         [Header("Dash Args")] public float dashCd;
         [HideInInspector] public float dashCdTimer;
-        public float dashDuration;
-        public float dashSpeed;
+        public float dashDuration; 
+        public float dashSpeed; 
         public float downDashDuration;
         [HideInInspector] public bool isDashing;
 
         #region attack
 
         [Header("Attack Args")] public float attackWindowTime;
+
+        #endregion
+
+        #region wall
+        [Header("Wall Args")]
+        public float slidingWallSpeed;
+        [HideInInspector]public int wallDir;
 
         #endregion
 
@@ -41,7 +48,7 @@ namespace App.View
         public Transform hangOnWallDetect;
         public float hangOnWallDetectDistance;
         private RaycastHit2D hangOnWallHit;
-        [HideInInspector]public int wallDir;
+
 
         #endregion
 
@@ -50,13 +57,16 @@ namespace App.View
             base.Awake();
 
             StateMachine = new PlayerStateMachine(this, animator);
+
         }
 
         public override void Start()
         {
             base.Start();
 
-            StateMachine.Initialize(StateMachine.IdleState);
+            // init state machine
+            StateMachine.Initialize(StateMachine.IdleState); 
+      
         }
 
         public override void Update()
@@ -82,11 +92,24 @@ namespace App.View
 
         #endregion
         
-        #region velocity
+        #region set 
 
         public void SetVelocity(float x, float y)
         {
             rg.velocity = new Vector2(x, y);
+        }
+
+        public void SetDir(int dir)
+        {
+            this.dir = dir;
+            if (dir == 1)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
         }
 
         #endregion
@@ -96,6 +119,12 @@ namespace App.View
 
         private void DetectHangOnWall()
         {
+            // if player is sliding wall, do not detect hang on wall
+            if (StateMachine.CurrentState == StateMachine.SlidingWallState)
+            {
+                return;
+            }
+            
             if (StateMachine.CurrentState == StateMachine.HangOnWallState)
             {
                 // set player y equal to hit point y
@@ -111,7 +140,6 @@ namespace App.View
             hangOnWallHit = Physics2D.Raycast(hangOnWallDetect.position, new Vector3(hangOnWallDetectDistance * dir, 0, 0), hangOnWallDetectDistance, 1 << LayerMask.NameToLayer("Ground"));
             if (hangOnWallHit.collider is not null && hangOnWallHit.collider.gameObject.CompareTag("HangOnWallPos"))
             {
-                // 
                 StateMachine.ChangeState(StateMachine.HangOnWallState);
                 // set wall dir
                 wallDir = dir;
