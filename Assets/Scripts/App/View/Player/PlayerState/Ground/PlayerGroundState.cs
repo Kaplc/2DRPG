@@ -26,9 +26,15 @@ namespace App.View
             base.Update();
 
             // jump
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && player.DetectGround())
             {
                 machine.ChangeState(machine.JumpingState);
+            }
+            
+            // fall down
+            if (!player.DetectGround())
+            {
+                machine.ChangeState(machine.ToppingState);
             }
         }
     }
