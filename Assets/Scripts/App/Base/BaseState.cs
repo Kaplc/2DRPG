@@ -34,6 +34,7 @@ namespace App.Base
         public virtual void Enter()
         {
             role.animator.SetBool(argsName, true);
+            machine.animator.speed = 1;
         }
         
         public virtual void Exit()

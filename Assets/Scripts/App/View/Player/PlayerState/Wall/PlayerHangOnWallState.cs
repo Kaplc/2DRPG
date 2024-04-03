@@ -35,7 +35,7 @@ namespace App.View.Wall
                 else
                 {
                     // climb up the wall
-                    machine.ChangeState(machine.ClimbState);
+                    machine.ChangeState(machine.ClimbWallState);
                 }
             }
 

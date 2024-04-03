@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace App.View
 {
-    public class BasePlayerState: BaseState
+    public class BasePlayerState : BaseState
     {
         protected float xAxis;
         protected float yAxis;
 
-        protected Player player => (Player) role;
+        protected Player player => (Player)role;
         protected new PlayerStateMachine machine => base.machine as PlayerStateMachine;
 
         protected float timer;
@@ -20,7 +20,7 @@ namespace App.View
         public override void Enter()
         {
             base.Enter();
-            
+
             // reset animation finish
             player.animationFinish = false;
         }
@@ -28,14 +28,53 @@ namespace App.View
         public override void Update()
         {
             base.Update();
-            
+
             xAxis = Input.GetAxisRaw("Horizontal");
             yAxis = Input.GetAxisRaw("Vertical");
             machine.animator.SetFloat("yVelocity", rg.velocity.y);
-            
+
             Flip();
             InputDash();
             InputAttack();
+            InputClimbLadder();
+
+            if (machine.CurrentState == machine.FallingState && rg.velocity.y == 0)
+            {
+                machine.ChangeState(machine.IdleState);
+            }
+        }
+
+        protected virtual void InputClimbLadder()
+        {
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                if (!machine.isClimbing && player.DetectLadder())
+                {
+                    player.DetectLadder(callBack: (ladderHit) =>
+                    {
+                        // set player position to ladder position
+                        player.transform.position =
+                            new Vector3(ladderHit.transform.position.x, player.transform.position.y, player.transform.position.z);
+                    });
+                    machine.ClimbLadderState.up = true; // set climb dir
+                    machine.ChangeState(machine.ClimbLadderState);
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.S) && !player.DetectGround())
+            {
+                if (!machine.isClimbing && player.DetectLadder(1f))
+                {
+                    machine.ClimbLadderState.up = false;
+                    machine.ChangeState(machine.ClimbLadderState);
+
+                    player.DetectLadder(1f, (ladderHit) =>
+                    {
+                        player.transform.position = new Vector3(ladderHit.transform.position.x, player.transform.position.y - 0.15f,
+                            player.transform.position.z);
+                    });
+                }
+            }
         }
 
         protected virtual void InputAttack()
@@ -53,7 +92,7 @@ namespace App.View
                 machine.ChangeState(machine.AttackState);
             }
         }
-        
+
         protected virtual void InputDash()
         {
             if (Input.GetKeyDown(KeyCode.LeftShift) && player.dashCdTimer < 0)
@@ -62,6 +101,7 @@ namespace App.View
                 {
                     return;
                 }
+
                 // is running can down dash
                 if (Input.GetKey(KeyCode.S) && player.DetectGround() && machine.CurrentState == machine.RunState)
                 {
@@ -71,6 +111,7 @@ namespace App.View
                 {
                     machine.ChangeState(machine.DashState);
                 }
+
                 player.dashCdTimer = player.dashCd;
             }
             else

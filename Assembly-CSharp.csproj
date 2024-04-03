@@ -54,13 +54,14 @@
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Jump\PlayerFallingState.cs" />
     <Compile Include="Assets\Scripts\App\View\Wall\HangOnWallPos.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerStateMachine.cs" />
-    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Wall\PlayerClimbState.cs" />
+    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Wall\PlayerClimbWallState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Move\PlayerDashState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Attack\PlayerAttackState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Wall\PlayerSlidingWallState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\PlayerGroundState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Jump\PlayerToppingState.cs" />
     <Compile Include="Assets\Scripts\App\Base\BaseState.cs" />
+    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Climb\PlayerClimbLadderState.cs" />
     <Reference Include="UnityEngine">
       <HintPath>E:\Develop\Unity\2021.3.36f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

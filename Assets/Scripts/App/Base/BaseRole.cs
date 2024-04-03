@@ -7,7 +7,7 @@ public class BaseRole : MonoBehaviour
 {
     public Animator animator;
     [HideInInspector] public Rigidbody2D rg;
-    [HideInInspector] public CapsuleCollider2D roleCollider;
+    public CapsuleCollider2D roleCollider;
     
     [Header("Now State")] public int dir;
 
@@ -23,7 +23,6 @@ public class BaseRole : MonoBehaviour
     public virtual void Awake()
     {
         rg = GetComponent<Rigidbody2D>();
-        roleCollider = GetComponent<CapsuleCollider2D>();
     }
 
     public virtual void Start()

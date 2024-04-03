@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace App.View
 {
@@ -11,14 +12,12 @@ namespace App.View
         public float yVelocity;
         [Header("Jump Args")]
         public float jumpForce;
-        
-
         [Header("Dash Args")] public float dashCd;
         [HideInInspector] public float dashCdTimer;
         public float dashDuration; 
         public float dashSpeed; 
         public float downDashDuration;
-   
+        [Header("Climb Ladder Args")] public float climbLadderSpeed;
 
         #region attack
 
@@ -44,12 +43,13 @@ namespace App.View
 
         #region detect
         
-        [Header("detect hang on wall Args")]
+        [Header("Detect hang on wall Args")]
         public Transform hangOnWallDetect;
         public float hangOnWallDetectDistance;
         private RaycastHit2D hangOnWallHit;
-
-
+        
+        // ladder
+        private RaycastHit2D ladderHit;
         #endregion
 
         public override void Awake()
@@ -146,7 +146,20 @@ namespace App.View
             }
         }
         
+        public bool DetectLadder(float distance = 0.8f,UnityAction<RaycastHit2D> callBack = null)
+        {
+            // detect ladder
+            ladderHit = Physics2D.Raycast(groundDetect.position, Vector2.down, groundDetectDistance * distance, 1 << LayerMask.NameToLayer("Ladder"));
 
+            if (ladderHit.collider is not null)
+            {
+                callBack?.Invoke(ladderHit);
+                return true;
+            }
+
+            return false;
+        }
+        
         #endregion
 
         #region Animation

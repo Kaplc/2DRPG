@@ -2,9 +2,9 @@ using App.Base;
 
 namespace App.View.Wall
 {
-    public class PlayerClimbState: BasePlayerState
+    public class PlayerClimbWallState: BasePlayerState
     {
-        public PlayerClimbState(BaseRole role, BaseStateMachine stateMachine, string argsName) : base(role, stateMachine, argsName)
+        public PlayerClimbWallState(BaseRole role, BaseStateMachine stateMachine, string argsName) : base(role, stateMachine, argsName)
         {
         }
 

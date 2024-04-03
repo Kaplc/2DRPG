@@ -1,4 +1,5 @@
 using App.Base;
+using App.View.Climb;
 using App.View.Ground.Attack;
 using App.View.Wall;
 using UnityEngine;
@@ -11,6 +12,8 @@ namespace App.View
         public bool isRunning;
         public bool isJumpFromWall;
         public bool isDashing;
+        public bool isClimbing;
+        public bool isJumpFromLadder;
 
         #endregion
 
@@ -29,8 +32,10 @@ namespace App.View
         public PlayerFallingState FallingState { get; private set; }
         // wall
         public PlayerHangOnWallState HangOnWallState { get; private set; }
-        public PlayerClimbState ClimbState { get; private set; }
+        public PlayerClimbWallState ClimbWallState { get; private set; }
         public PlayerSlidingWallState SlidingWallState { get; private set; }
+        // ladder
+        public PlayerClimbLadderState ClimbLadderState { get; private set; }
         
         public PlayerStateMachine(BaseRole role ,Animator animator) : base(role ,animator)
         {
@@ -48,8 +53,10 @@ namespace App.View
             FallingState = new PlayerFallingState(role, this, "Jump");
             // wall state
             HangOnWallState = new PlayerHangOnWallState(role, this, "HangOnWall");
-            ClimbState = new PlayerClimbState(role, this, "Jump");
+            ClimbWallState = new PlayerClimbWallState(role, this, "Jump");
             SlidingWallState = new PlayerSlidingWallState(role, this, "SlidingWall");
+            // ladder state
+            ClimbLadderState = new PlayerClimbLadderState(role, this, "ClimbLadder");
         }
     }
 }
