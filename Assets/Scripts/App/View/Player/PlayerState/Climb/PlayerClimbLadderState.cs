@@ -91,11 +91,33 @@ namespace App.View.Climb
             machine.animator.StopPlayback();
             
             player.roleCollider.isTrigger = false;
+            
+            // flip player
+            if (player.dir > 0)
+            {
+                player.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else if (player.dir < 0)
+            {
+                player.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
         }
 
         protected override void InputDash()
         {
             // do not dash when climbing ladder
+        }
+
+        protected override void Flip()
+        {
+            if (xAxis > 0)
+            {
+                player.dir = 1;
+            }
+            else if (xAxis < 0)
+            {
+                player.dir = -1;
+            }
         }
     }
 }

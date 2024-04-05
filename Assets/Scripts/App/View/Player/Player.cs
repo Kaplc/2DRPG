@@ -52,6 +52,15 @@ namespace App.View
         private RaycastHit2D ladderHit;
         #endregion
 
+        [HideInInspector] public bool isDead;
+
+        #region wound info
+        
+        [Header("Wound Args")]
+        public float woundForce;
+
+        #endregion
+
         public override void Awake()
         {
             base.Awake();
@@ -76,6 +85,26 @@ namespace App.View
             StateMachine.CurrentState.Update();
             
             DetectHangOnWall();
+
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                StateMachine.ChangeState(StateMachine.WoundState);
+            }
+
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                if (isDead)
+                {
+                    StateMachine.ChangeState(StateMachine.IdleState);
+                    isDead = false;
+                }
+                else
+                {
+                    StateMachine.ChangeState(StateMachine.DeadState);
+                    isDead = true;
+                }
+                
+            }
         }
 
         #region gizmos
@@ -93,6 +122,11 @@ namespace App.View
         #endregion
         
         #region set 
+        
+        public void AddForce(float x, float y)
+        {
+            rg.AddForce(new Vector2(x, y));
+        }
 
         public void SetVelocity(float x, float y)
         {
@@ -119,6 +153,10 @@ namespace App.View
 
         private void DetectHangOnWall()
         {
+            if (isDead)
+            {
+                return;
+            }
             // if player is sliding wall, do not detect hang on wall
             if (StateMachine.CurrentState == StateMachine.SlidingWallState)
             {

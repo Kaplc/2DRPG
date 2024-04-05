@@ -3,15 +3,23 @@
   "WorkspaceRootPath": "E:\\Project\\Unity\\2DRPG\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|e:\\project\\unity\\2drpg\\assets\\scripts\\app\\view\\player\\playerstate\\playerwoundstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\app\\view\\player\\playerstate\\playerwoundstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|e:\\project\\unity\\2drpg\\assets\\scripts\\app\\view\\player\\playerstate\\climb\\playerclimbladderstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\app\\view\\player\\playerstate\\climb\\playerclimbladderstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|e:\\project\\unity\\2drpg\\assets\\scripts\\app\\view\\player\\playerstate\\ground\\playergroundstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\app\\view\\player\\playerstate\\ground\\playergroundstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|e:\\project\\unity\\2drpg\\assets\\scripts\\app\\view\\player\\playerstate\\ground\\move\\playerdashstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|E:\\Project\\Unity\\2DRPG\\assets\\scripts\\app\\view\\player\\playerstate\\ground\\move\\playerdashstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\app\\view\\player\\playerstate\\ground\\move\\playerdashstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|e:\\project\\unity\\2drpg\\assets\\scripts\\app\\view\\player\\playerstate\\wall\\playerslidingwallstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|E:\\Project\\Unity\\2DRPG\\assets\\scripts\\app\\view\\player\\playerstate\\wall\\playerslidingwallstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\app\\view\\player\\playerstate\\wall\\playerslidingwallstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,24 +27,24 @@
       "RelativeMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\app\\view\\player\\playerstate\\wall\\playerhangonwallstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|e:\\project\\unity\\2drpg\\assets\\scripts\\app\\view\\player\\playerstate\\wall\\playerclimbstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\app\\view\\player\\playerstate\\wall\\playerclimbstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|e:\\project\\unity\\2drpg\\assets\\scripts\\app\\view\\player\\playerstate\\jump\\playerjumpingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|E:\\Project\\Unity\\2DRPG\\assets\\scripts\\app\\view\\player\\playerstate\\jump\\playerjumpingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\app\\view\\player\\playerstate\\jump\\playerjumpingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|e:\\project\\unity\\2drpg\\assets\\scripts\\app\\view\\player\\playerstate\\baseplayerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|E:\\Project\\Unity\\2DRPG\\assets\\scripts\\app\\view\\player\\playerstate\\baseplayerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\app\\view\\player\\playerstate\\baseplayerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|e:\\project\\unity\\2drpg\\assets\\scripts\\app\\view\\player\\playerstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|E:\\Project\\Unity\\2DRPG\\assets\\scripts\\app\\view\\player\\playerstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\app\\view\\player\\playerstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|E:\\Project\\Unity\\2DRPG\\assets\\scripts\\app\\view\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE8F51F6-26A6-153C-9495-FE0570CACAB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\app\\view\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerClimbState.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerClimbState.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,6 +59,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PlayerWoundState.cs",
+              "DocumentMoniker": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\PlayerState\\PlayerWoundState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\PlayerWoundState.cs",
+              "ToolTip": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\PlayerState\\PlayerWoundState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\PlayerWoundState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T12:33:45.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerClimbLadderState.cs",
+              "DocumentMoniker": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\PlayerState\\Climb\\PlayerClimbLadderState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\Climb\\PlayerClimbLadderState.cs",
+              "ToolTip": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\PlayerState\\Climb\\PlayerClimbLadderState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\Climb\\PlayerClimbLadderState.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAYwEQAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T12:10:08.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PlayerGroundState.cs",
               "DocumentMoniker": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\PlayerState\\Ground\\PlayerGroundState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\Ground\\PlayerGroundState.cs",
@@ -63,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "PlayerDashState.cs",
               "DocumentMoniker": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\PlayerState\\Ground\\Move\\PlayerDashState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\Ground\\Move\\PlayerDashState.cs",
@@ -71,12 +105,11 @@
               "RelativeToolTip": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\Ground\\Move\\PlayerDashState.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAWwBoAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T14:11:02.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T14:11:02.405Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "BasePlayerState.cs",
               "DocumentMoniker": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\PlayerState\\BasePlayerState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\BasePlayerState.cs",
@@ -84,12 +117,11 @@
               "RelativeToolTip": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\BasePlayerState.cs",
               "ViewState": "AQIAABQAAAAAAAAAAAAqwCgAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T13:51:33.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T13:51:33.214Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "PlayerStateMachine.cs",
               "DocumentMoniker": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\PlayerStateMachine.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\App\\View\\Player\\PlayerStateMachine.cs",
@@ -97,12 +129,11 @@
               "RelativeToolTip": "Assets\\Scripts\\App\\View\\Player\\PlayerStateMachine.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAowAYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T14:04:37.913Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T14:04:37.913Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "PlayerClimbState.cs",
               "DocumentMoniker": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerClimbState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerClimbState.cs",
@@ -110,12 +141,11 @@
               "RelativeToolTip": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerClimbState.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAIA0wA4AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T13:54:38.129Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T13:54:38.129Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PlayerJumpingState.cs",
               "DocumentMoniker": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\PlayerState\\Jump\\PlayerJumpingState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\Jump\\PlayerJumpingState.cs",
@@ -123,12 +153,11 @@
               "RelativeToolTip": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\Jump\\PlayerJumpingState.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAIA0wBEAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T13:54:30.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T13:54:30.03Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "PlayerHangOnWallState.cs",
               "DocumentMoniker": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerHangOnWallState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerHangOnWallState.cs",
@@ -136,12 +165,11 @@
               "RelativeToolTip": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerHangOnWallState.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAApwB8AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T19:38:18.239Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T19:38:18.239Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "PlayerSlidingWallState.cs",
               "DocumentMoniker": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerSlidingWallState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerSlidingWallState.cs",
@@ -149,12 +177,11 @@
               "RelativeToolTip": "Assets\\Scripts\\App\\View\\Player\\PlayerState\\Wall\\PlayerSlidingWallState.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAApwC0AAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T19:38:17.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T19:38:17.324Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Player.cs",
               "DocumentMoniker": "E:\\Project\\Unity\\2DRPG\\Assets\\Scripts\\App\\View\\Player\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\App\\View\\Player\\Player.cs",
@@ -162,8 +189,17 @@
               "RelativeToolTip": "Assets\\Scripts\\App\\View\\Player\\Player.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T18:47:10.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T18:47:10.777Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }

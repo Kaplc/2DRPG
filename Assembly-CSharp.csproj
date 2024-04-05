@@ -41,27 +41,33 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Jump\PlayerJumpingState.cs" />
-    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\BasePlayerState.cs" />
-    <Compile Include="Assets\Scripts\App\View\Player\Player.cs" />
-    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Move\PlayerRunState.cs" />
-    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Move\PlayerIdleState.cs" />
-    <Compile Include="Assets\Scripts\App\View\Generic\Animation\AnimationTriggers.cs" />
-    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Move\PlayerDownDashState.cs" />
+    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\PlayerDeadState.cs" />
     <Compile Include="Assets\Scripts\App\Base\BaseRole.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Wall\PlayerHangOnWallState.cs" />
+    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Jump\PlayerJumpingState.cs" />
     <Compile Include="Assets\Scripts\App\Base\BaseStateMachine.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Jump\PlayerFallingState.cs" />
+    <Compile Include="Assets\Scripts\Library\BaseSingleton\BaseMonoSingleton.cs" />
     <Compile Include="Assets\Scripts\App\View\Wall\HangOnWallPos.cs" />
+    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\BasePlayerState.cs" />
+    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Climb\PlayerClimbLadderState.cs" />
+    <Compile Include="Assets\Scripts\App\View\Player\Player.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerStateMachine.cs" />
+    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Move\PlayerRunState.cs" />
+    <Compile Include="Assets\Scripts\Library\BaseSingleton\BaseMonoAutoSingleton.cs" />
+    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Move\PlayerIdleState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Wall\PlayerClimbWallState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Move\PlayerDashState.cs" />
+    <Compile Include="Assets\Scripts\Library\BaseSingleton\BaseSingleton.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Attack\PlayerAttackState.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Wall\PlayerSlidingWallState.cs" />
+    <Compile Include="Assets\Scripts\Library\MonoManager\MonoManager.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\PlayerGroundState.cs" />
+    <Compile Include="Assets\Scripts\App\View\Generic\Animation\AnimationTriggers.cs" />
     <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Jump\PlayerToppingState.cs" />
+    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\PlayerWoundState.cs" />
     <Compile Include="Assets\Scripts\App\Base\BaseState.cs" />
-    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Climb\PlayerClimbLadderState.cs" />
+    <Compile Include="Assets\Scripts\App\View\Player\PlayerState\Ground\Move\PlayerDownDashState.cs" />
     <Reference Include="UnityEngine">
       <HintPath>E:\Develop\Unity\2021.3.36f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -307,9 +313,6 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>E:\Develop\Unity\2021.3.36f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>E:\Project\Unity\2DRPG\Library\PackageCache\com.unity.visualscripting@1.9.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>E:\Develop\Unity\2021.3.36f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -683,9 +686,6 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>E:\Develop\Unity\2021.3.36f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow.Editor">
-      <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.Tilemap.Extras">
       <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
     </Reference>
@@ -716,14 +716,8 @@
     <Reference Include="Unity.Timeline">
       <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Core.Editor">
-      <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State.Editor">
-      <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Editor">
       <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
@@ -737,11 +731,8 @@
     <Reference Include="Unity.2D.Path.Editor">
       <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-      <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    <Reference Include="Unity.2D.Psdimporter.Editor">
+      <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -752,20 +743,14 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Psdimporter.Editor">
-      <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
       <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-      <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
@@ -778,9 +763,6 @@
     </Reference>
     <Reference Include="Unity.2D.Aseprite.Editor">
       <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.2D.Aseprite.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Shared.Editor">
-      <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
       <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
@@ -814,9 +796,6 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State">
-      <HintPath>E:\Project\Unity\2DRPG\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

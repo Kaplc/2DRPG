@@ -20,7 +20,7 @@ namespace App.View
         public override void Enter()
         {
             base.Enter();
-
+            
             // reset animation finish
             player.animationFinish = false;
         }
@@ -42,6 +42,12 @@ namespace App.View
             {
                 machine.ChangeState(machine.IdleState);
             }
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            player.animationFinish = true;
         }
 
         protected virtual void InputClimbLadder()

@@ -113,6 +113,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -663,15 +675,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_27
+      name: Dead_2
       rect:
         serializedVersion: 2
         x: 216
         y: 531
         width: 31
         height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -684,10 +696,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_35
+      name: Dead_1
       rect:
         serializedVersion: 2
-        x: 152
+        x: 151
         y: 529
         width: 23
         height: 33
@@ -705,15 +717,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_36
+      name: Dead_5
       rect:
         serializedVersion: 2
         x: 281
         y: 530
         width: 38
         height: 42
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -726,15 +738,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_37
+      name: Dead_8
       rect:
         serializedVersion: 2
         x: 349
         y: 533
         width: 38
         height: 39
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -747,15 +759,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_38
+      name: Dead_3
       rect:
         serializedVersion: 2
         x: 4
         y: 485
         width: 39
         height: 38
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -768,15 +780,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_43
+      name: Dead_7
       rect:
         serializedVersion: 2
         x: 208
         y: 485
         width: 40
         height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -789,15 +801,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_44
+      name: Dead_6
       rect:
         serializedVersion: 2
         x: 73
         y: 485
         width: 42
         height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -810,15 +822,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_47
+      name: Dead_4
       rect:
         serializedVersion: 2
         x: 277
         y: 485
         width: 42
         height: 22
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -831,15 +843,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_48
+      name: Dead_9
       rect:
         serializedVersion: 2
         x: 140
         y: 485
         width: 41
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -852,15 +864,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_49
+      name: Dead_10
       rect:
         serializedVersion: 2
         x: 346
         y: 485
         width: 40
         height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2206,6 +2218,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Dead_1: 999352455
+      Dead_10: 64319218
+      Dead_2: 1332369424
+      Dead_3: -1640813579
+      Dead_4: -567070705
+      Dead_5: 1493034768
+      Dead_6: -662410543
+      Dead_7: -1066577154
+      Dead_8: -1618768418
+      Dead_9: -1521249325
       Player_0: 459755307
       Player_1: -936474176
       Player_10: 193914205
@@ -2242,7 +2264,6 @@ TextureImporter:
       Player_24: 1164985635
       Player_25: -829182132
       Player_26: -1934314060
-      Player_27: 1332369424
       Player_28: 1343321639
       Player_29: 1103149427
       Player_3: 1344314059
@@ -2251,22 +2272,13 @@ TextureImporter:
       Player_32: -95543125
       Player_33: -696778545
       Player_34: -1258006737
-      Player_35: 999352455
-      Player_36: 1493034768
-      Player_37: -1618768418
-      Player_38: -1640813579
       Player_39: 117338899
       Player_4: -1076017225
       Player_40: -1764178268
       Player_41: 2055682797
       Player_42: -272510467
-      Player_43: -1066577154
-      Player_44: -662410543
       Player_45: -405231162
       Player_46: -1651062728
-      Player_47: -567070705
-      Player_48: -1521249325
-      Player_49: 64319218
       Player_5: 1162342981
       Player_50: 909066780
       Player_51: -1932988556

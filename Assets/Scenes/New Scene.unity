@@ -1081,6 +1081,8 @@ MonoBehaviour:
   animationFinish: 0
   hangOnWallDetect: {fileID: 105748694}
   hangOnWallDetectDistance: 0.05
+  isDead: 0
+  woundForce: 50
 --- !u!1 &1657334195
 GameObject:
   m_ObjectHideFlags: 0

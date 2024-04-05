@@ -8,13 +8,14 @@ namespace App.View
 {
     public class PlayerStateMachine: BaseStateMachine
     {
+        public Player Player => (Player)role;
+        
         #region state info
         public bool isRunning;
         public bool isJumpFromWall;
         public bool isDashing;
         public bool isClimbing;
-        public bool isJumpFromLadder;
-
+        public bool isWounded;
         #endregion
 
 
@@ -34,8 +35,12 @@ namespace App.View
         public PlayerHangOnWallState HangOnWallState { get; private set; }
         public PlayerClimbWallState ClimbWallState { get; private set; }
         public PlayerSlidingWallState SlidingWallState { get; private set; }
-        // ladder
+        // climb
         public PlayerClimbLadderState ClimbLadderState { get; private set; }
+        // wound
+        public PlayerWoundState WoundState { get; private set; }
+        // dead
+        public PlayerDeadState DeadState { get; private set; }
         
         public PlayerStateMachine(BaseRole role ,Animator animator) : base(role ,animator)
         {
@@ -57,6 +62,19 @@ namespace App.View
             SlidingWallState = new PlayerSlidingWallState(role, this, "SlidingWall");
             // ladder state
             ClimbLadderState = new PlayerClimbLadderState(role, this, "ClimbLadder");
+            // wound state
+            WoundState = new PlayerWoundState(role, this, "Wound");
+            // dead state
+            DeadState = new PlayerDeadState(role, this, "Dead");
+        }
+
+        public override void ChangeState(BaseState newState)
+        {
+            if (Player.isDead && newState != IdleState)
+            {
+                return; 
+            }
+            base.ChangeState(newState);
         }
     }
 }
